@@ -2,6 +2,8 @@ arch:
   - amd64
   - ppc64le
   
+dist: bionic
+
 language: node_js
 
 node_js:
