@@ -11,5 +11,5 @@ node_js:
 
 
 script:
-  - echo 'console.log("No of CPUs: "+require('os').cpus().length);' > index.js
+  - arch
   - node index.js
