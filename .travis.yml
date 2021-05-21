@@ -9,9 +9,8 @@ script:
   - arch
   - node index.js
   
-  
-include:
-  jobs:
+jobs:  
+  include:
     - arch: amd64
       dist: xenial
     - arch: amd64
