@@ -1,9 +1,4 @@
-arch:
-  - amd64
-  - ppc64le
-  - s390x
-  - arm64
-  
+
 language: node_js
 dist: focal
 node_js:
