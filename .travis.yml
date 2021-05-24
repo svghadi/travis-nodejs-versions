@@ -7,9 +7,10 @@ node_js:
 before_script:
   - |
     cat /proc/stat > /tmp/stat
-    sed -i '/^cpu[2-9]/d' /tmp/stat
+    sed -i '^cpu[2-9]/d' /tmp/stat
     sed -i '^cpu[0-9][0-9]/d' /tmp/stat
     sudo mount --bind /tmp/stat /proc/stat
+    cat /proc/stat
 
 script:
   - arch
@@ -17,27 +18,7 @@ script:
   
 jobs:  
   include:
-    - arch: amd64
-      dist: xenial
-    - arch: amd64
-      dist: bionic
-    - arch: amd64
-      dist: focal
-    - arch: ppc64le
-      dist: xenial
-    - arch: ppc64le
-      dist: bionic
     - arch: ppc64le
       dist: focal
-    - arch: s390x
-      dist: xenial
-    - arch: s390x
-      dist: bionic
-    - arch: s390x
-      dist: focal
-    - arch: arm64
-      dist: xenial
-    - arch: arm64
-      dist: bionic
     - arch: arm64
       dist: focal
